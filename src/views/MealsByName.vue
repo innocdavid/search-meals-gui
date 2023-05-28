@@ -26,13 +26,9 @@
         <div class="p-3">
           <p class="mb-4"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit iure consequatur beatae. Ea quibusdam veniam, veritatis pariatur deserunt non</p>
           <div class="flex items-center justify-between">
-            <a 
-              :href="meal.strYoutube" 
-              target="_blank"
-              class="px-3 py-2 rounded border-2 border-red-600 text-white bg-red-500 hover:bg-red-600 transition-colors"
-            >
-              Youtube
-            </a>
+            <YouTubeButton :href="meal.strYoutube">
+              YouTube
+            </YouTubeButton>
           </div>
           
         </div>
@@ -46,6 +42,7 @@
 import { ref, computed, onMounted } from 'vue';
 import store from '../store';
 import { useRoute } from 'vue-router';
+import YouTubeButton from '../components/YouTubeButton.vue';
 
 const route = useRoute();
 const keyword = ref('');
